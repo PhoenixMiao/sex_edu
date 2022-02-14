@@ -1,0 +1,65 @@
+server:
+  port: 8000
+  domain:
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username:
+    password:
+
+  jackson:
+    time-zone: GMT+8
+
+  redis:
+    database: 0
+    host:
+    port: 6379
+    password:
+    timeout: 1000
+
+
+
+
+
+mini-app:
+# 开发
+#  app-id:
+#  app-secret:
+# 正式
+  app-id:
+  app-secret:
+  mch-id:
+  mch-serial-no:
+  mch-private-key:
+  apiV3-key:
+
+
+
+
+#日志路径
+logback:
+  dir: logs
+#文件名称
+  filename:
+    all: springboot-base-frame-all
+    info: springboot-base-frame-info
+    warn: springboot-base-frame-warn
+    error: springboot-base-frame-error
+#文件的最大数量
+  maxhistory: 10
+#文件的最大文件大小
+  maxfilesize: 100MB
+#日志级别
+  level: debug
+#日志字符编码
+  charset: UTF-8
+#日志格式
+  CONSOLE_LOG_PATTERN: '%d{yyyy-MM-dd HH:mm:ss.SSS} %boldYellow([%thread]) %highlight(%-5level) %boldGreen(%logger{50}) - %msg%n'
+  FILE_LOG_PATTERN: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n'
